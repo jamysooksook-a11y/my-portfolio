@@ -7,6 +7,7 @@ export type Project = {
   period: string 
    summary: string[]
   skills: string[]
+  previewType?: "image" | "components"
 
 }
 export const projects: Project[] = [
@@ -23,6 +24,7 @@ export const projects: Project[] = [
       "카드형 정보 구조와 리스트 UI를 정리했습니다.",
       "반응형 레이아웃과 재사용 가능한 스타일 구조를 고려했습니다.",
     ],
+     previewType: "image",
   },
  {
     id: 2,
@@ -37,6 +39,7 @@ export const projects: Project[] = [
       "섹션 단위로 Hero, Projects, Skills 형태를 분리했습니다.",
       "포트폴리오용 재구현 프로젝트로 확장했습니다.",
     ],
+     previewType: "image",
   },
  {
     id: 3,
@@ -51,5 +54,6 @@ export const projects: Project[] = [
       "섹션 단위로 Hero, Projects, Skills 형태를 분리했습니다.",
       "포트폴리오용 재구현 프로젝트로 확장했습니다.",
     ],
+        previewType: "components",
   },
 ]
