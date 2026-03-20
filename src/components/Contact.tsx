@@ -19,14 +19,14 @@ export default function Contact() {
         </a>
 
         <a
-          href="https://github.com/your-github"
+          href="https://my-portfolio-mu-black-36.vercel.app/"
           target="_blank"
           rel="noreferrer"
           className="rounded-2xl border border-slate-200 bg-white p-6 transition hover:shadow-md"
         >
           <p className="text-sm font-medium text-orange-600">GitHub</p>
           <p className="mt-2 text-lg font-semibold text-slate-900">
-            github.com/your-github
+           my-portfolio 
           </p>
         </a>
       </div>
