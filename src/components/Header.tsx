@@ -23,10 +23,10 @@ export default function Header({ darkMode, setDarkMode }: HeaderProps) {
 
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-              Woisook
+            김외숙
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400">
-              Publisher · Frontend
+              Publisher  
             </span>
           </div>
         </Link>
