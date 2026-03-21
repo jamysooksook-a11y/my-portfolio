@@ -21,7 +21,7 @@ function SegmentedControl({
   return (
     <div
       className={[
-        "inline-flex rounded-2xl bg-slate-200 p-1",
+        "inline-flex rounded-2xl bg-[#E7E1DA] p-1",
         disabled ? "opacity-50" : "",
       ].join(" ")}
     >
@@ -61,8 +61,8 @@ function SectionTitle({
 }) {
   return (
     <div className="max-w-2xl">
-      <p className="text-sm font-medium text-orange-600">{eyebrow}</p>
-      <h2 className="mt-2 text-3xl font-bold text-slate-900">{title}</h2>
+      <p className="text-sm font-medium text-[#A85E2E]">{eyebrow}</p>
+      <h1 className="mt-2 text-4xl font-bold text-slate-900">{title}</h1>
       <p className="mt-4 leading-7 text-slate-600">{description}</p>
     </div>
   )
@@ -78,14 +78,38 @@ function ComponentBlock({
   children: React.ReactNode
 }) {
   return (
-    <section className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+    <section className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
       <div className="max-w-2xl">
-        <h3 className="text-xl font-semibold text-slate-900">{title}</h3>
+        <h2 className="text-2xl font-semibold text-slate-900">{title}</h2>
         <p className="mt-3 leading-7 text-slate-600">{description}</p>
       </div>
 
-      <div className="mt-8 rounded-2xl bg-slate-50 p-6">{children}</div>
+      <div className="mt-8 rounded-[24px] bg-slate-50 p-6">{children}</div>
     </section>
+  )
+}
+
+function PreviewLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-sm font-medium text-slate-500">{children}</p>
+  )
+}
+
+function ShowcaseCard({
+  badge,
+  title,
+  description,
+}: {
+  badge: string
+  title: string
+  description: string
+}) {
+  return (
+    <article className="rounded-[24px] bg-white p-5 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-md">
+      <p className="text-sm font-medium text-[#A85E2E]">{badge}</p>
+      <h3 className="mt-2 text-lg font-semibold text-slate-900">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
+    </article>
   )
 }
 
@@ -130,7 +154,7 @@ export default function Components() {
           >
             <div className="space-y-8">
               <div>
-                <p className="text-sm font-medium text-slate-500">2 Options</p>
+                <PreviewLabel>2 Options</PreviewLabel>
                 <div className="mt-4">
                   <SegmentedControl
                     options={[
@@ -144,7 +168,7 @@ export default function Components() {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-slate-500">3 Options</p>
+                <PreviewLabel>3 Options</PreviewLabel>
                 <div className="mt-4">
                   <SegmentedControl
                     options={[
@@ -159,7 +183,7 @@ export default function Components() {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-slate-500">Disabled</p>
+                <PreviewLabel>Disabled</PreviewLabel>
                 <div className="mt-4">
                   <SegmentedControl
                     options={[
@@ -179,69 +203,138 @@ export default function Components() {
         <div id="buttons">
           <ComponentBlock
             title="Buttons"
-            description="우선순위에 따라 primary / secondary 버튼을 구분하고, 기본적인 액션 영역을 정리했습니다."
+            description="버튼 우선순위와 상태에 따라 primary / secondary / subtle 스타일을 정리했습니다."
           >
-            <div className="flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
-              >
-                Primary Button
-              </button>
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div>
+                <PreviewLabel>Variants</PreviewLabel>
 
-              <button
-                type="button"
-                className="rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-700 ring-1 ring-slate-200"
-              >
-                Secondary Button
-              </button>
+                <div className="mt-4 flex flex-wrap gap-4">
+                  <button
+                    type="button"
+                    className="rounded-2xl bg-[#A85E2E] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:brightness-95"
+                  >
+                    Primary Button
+                  </button>
 
-              <button
-                type="button"
-                disabled
-                className="cursor-not-allowed rounded-xl bg-slate-200 px-5 py-3 text-sm font-medium text-slate-400"
-              >
-                Disabled Button
-              </button>
+                  <button
+                    type="button"
+                    className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-slate-700 ring-1 ring-slate-200 transition hover:bg-slate-50"
+                  >
+                    Secondary Button
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-2xl bg-[#F3ECE5] px-5 py-3 text-sm font-medium text-[#8C5730] transition hover:bg-[#EADFD4]"
+                  >
+                    Subtle Button
+                  </button>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-4">
+                  <button
+                    type="button"
+                    disabled
+                    className="cursor-not-allowed rounded-2xl bg-slate-200 px-5 py-3 text-sm font-medium text-slate-400"
+                  >
+                    Disabled Button
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <PreviewLabel>Usage Note</PreviewLabel>
+
+                <div className="mt-4 rounded-2xl bg-white p-5 ring-1 ring-slate-200">
+                  <ul className="space-y-3 text-sm leading-6 text-slate-600">
+                    <li>• Primary 버튼은 핵심 CTA에 사용합니다.</li>
+                    <li>• Secondary 버튼은 보조 액션에 사용합니다.</li>
+                    <li>• Subtle 버튼은 카드 내부 액션에 적합합니다.</li>
+                    <li>• Disabled 상태도 함께 설계해 일관성을 유지합니다.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </ComponentBlock>
         </div>
 
         <div id="cards">
           <ComponentBlock
-            title="Card"
-            description="정보를 그룹화해서 전달하는 카드 컴포넌트입니다. 제목, 설명, 상태값 조합을 기준으로 반복 사용을 고려했습니다."
+            title="Cards"
+            description="정보를 묶어 전달하는 카드 컴포넌트입니다. 제목, 설명, 강조 라벨을 기준으로 반복 사용을 고려해 구성했습니다."
           >
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              <article className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-                <p className="text-sm font-medium text-orange-600">Featured</p>
-                <h4 className="mt-2 text-lg font-semibold text-slate-900">
-                  Finance Dashboard
-                </h4>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  자산 정보와 카드 UI를 중심으로 구성한 대시보드형 카드 예시입니다.
-                </p>
-              </article>
+              <ShowcaseCard
+                badge="Featured"
+                title="Finance Dashboard"
+                description="자산 요약과 카드형 UI를 중심으로 구성한 대시보드형 카드 예시입니다."
+              />
 
-              <article className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-                <p className="text-sm font-medium text-orange-600">Component</p>
-                <h4 className="mt-2 text-lg font-semibold text-slate-900">
-                  Recommendation Card
-                </h4>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  추천 리스트와 카드 반복 구조에 적합한 정보형 컴포넌트입니다.
-                </p>
-              </article>
+              <ShowcaseCard
+                badge="Component"
+                title="Recommendation Card"
+                description="리스트 반복 구조에서 사용하기 좋은 추천형 카드 컴포넌트입니다."
+              />
 
-              <article className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-                <p className="text-sm font-medium text-orange-600">Preview</p>
-                <h4 className="mt-2 text-lg font-semibold text-slate-900">
-                  Summary Card
-                </h4>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  요약 정보와 상태 텍스트를 함께 보여주는 카드 레이아웃입니다.
+              <ShowcaseCard
+                badge="Summary"
+                title="Status Card"
+                description="상태 텍스트와 핵심 정보를 조합해 요약 전달에 적합한 카드입니다."
+              />
+            </div>
+
+            <div className="mt-8 grid gap-4 lg:grid-cols-[1.3fr_0.7fr]">
+              <div className="rounded-[24px] bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                <p className="text-sm font-medium text-[#A85E2E]">Preview Layout</p>
+                <h3 className="mt-2 text-xl font-semibold text-slate-900">
+                  Component Showcase Card
+                </h3>
+                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600">
+                  카드 내부에 텍스트 계층과 상태 라벨을 정리하여, 정보 우선순위가
+                  자연스럽게 드러나도록 설계했습니다.
                 </p>
-              </article>
+
+                <div className="mt-6 rounded-2xl bg-slate-50 p-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-medium text-slate-500">Category</p>
+                      <p className="mt-1 text-lg font-semibold text-slate-900">
+                        UI Archive
+                      </p>
+                    </div>
+
+                    <span className="rounded-full bg-[#F3ECE5] px-3 py-1 text-xs font-medium text-[#8C5730]">
+                      Active
+                    </span>
+                  </div>
+
+                  <p className="mt-4 text-sm leading-6 text-slate-600">
+                    재사용 가능한 UI 요소를 정리해 컴포넌트 아카이브 페이지에서
+                    반복 활용할 수 있는 카드 예시입니다.
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {["Card", "Tag", "Status"].map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full bg-white px-3 py-1 text-xs text-slate-600 ring-1 ring-slate-200"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-[24px] bg-[#F6F1EB] p-6">
+                <p className="text-sm font-medium text-[#A85E2E]">Design Point</p>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+                  <li>• 둥근 radius로 부드러운 카드 인상</li>
+                  <li>• badge / title / description 계층화</li>
+                  <li>• 태그와 상태값 조합으로 확장성 확보</li>
+                </ul>
+              </div>
             </div>
           </ComponentBlock>
         </div>
