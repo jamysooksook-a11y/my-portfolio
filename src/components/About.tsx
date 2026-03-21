@@ -2,11 +2,11 @@ export default function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-24">
 
-      <h2 className="text-3xl font-bold text-slate-900">
+     <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100">
         About
       </h2>
 
-      <div className="mt-8 max-w-3xl space-y-6 text-slate-600 leading-7">
+      <div className="mt-8 max-w-3xl space-y-6 text-slate-600 dark:text-slate-300 leading-7">
 
         <p>
           퍼블리셔로서 다양한 서비스의 화면을 구현하며

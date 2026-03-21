@@ -50,7 +50,7 @@ export default function ProjectCard({ project }: Props) {
       to={project.link || "#"}
       className="block rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-400"
     >
-      <article className="group overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+      <article className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
         <div className="aspect-[16/10] overflow-hidden bg-gray-200">
           {project.previewType === "components" ? (
             <ComponentPreview />
