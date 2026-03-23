@@ -18,7 +18,7 @@ export const projects: Project[] = [
     image: "/images/finance-dashboard-main.png",
     skills: ["HTML", "SCSS", "JavaScript"],
     previewType: "image",
-    link: "/ai-education",
+    link: "/finance-dashboard",
   },
   {
     id: 2,

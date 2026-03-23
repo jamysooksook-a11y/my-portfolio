@@ -5,16 +5,12 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Components from "./pages/Components"
 import ProjectDetail from "./pages/ProjectDetail"
+import FinanceDashboard from "./pages/FinanceDashboard"
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme")
-    if (savedTheme === "dark") {
-      setDarkMode(true)
-    }
-  }, [])
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark"
+  )
 
   useEffect(() => {
     if (darkMode) {
@@ -36,6 +32,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/components" element={<Components />} />
           <Route path="/ai-education" element={<ProjectDetail />} />
+          <Route path="/finance-dashboard" element={<FinanceDashboard />} />
         </Routes>
       </div>
     </BrowserRouter>
