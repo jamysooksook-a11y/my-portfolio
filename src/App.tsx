@@ -4,7 +4,7 @@ import Header from "./components/Header"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Components from "./pages/Components"
-import ProjectDetail from "./pages/ProjectDetail"
+import AiEducation from "./pages/AiEducation"
 import FinanceDashboard from "./pages/FinanceDashboard"
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/components" element={<Components />} />
-          <Route path="/ai-education" element={<ProjectDetail />} />
+          <Route path="/ai-education" element={<AiEducation />} />
           <Route path="/finance-dashboard" element={<FinanceDashboard />} />
         </Routes>
       </div>
