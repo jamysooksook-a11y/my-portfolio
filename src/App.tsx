@@ -5,6 +5,12 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Components from "./pages/Components"
 import AiEducation from "./pages/AiEducation"
+import NoticeList from "./pages/NoticeList"
+import NoticeDetail from "./pages/NoticeDetail"
+import Faq from "./pages/Faq"
+import TabMenu from "./pages/TabMenu"
+import MemberCard from "./pages/MemberCard"
+import ContactForm from "./pages/ContactForm"
 import FinanceDashboard from "./pages/FinanceDashboard"
 
 function App() {
@@ -32,6 +38,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/components" element={<Components />} />
           <Route path="/ai-education" element={<AiEducation />} />
+          <Route path="/notice" element={<NoticeList />} />
+          <Route path="/notice/:id" element={<NoticeDetail />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/tab" element={<TabMenu />} />
+          <Route path="/members" element={<MemberCard />} />
+          <Route path="/contact" element={<ContactForm />} />
           <Route path="/finance-dashboard" element={<FinanceDashboard />} />
         </Routes>
       </div>
