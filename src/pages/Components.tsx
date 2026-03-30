@@ -2,6 +2,7 @@ import { useState } from "react"
 import ComponentBlock from "../components/ui/ComponentBlock"
 import SegmentedControl from "../components/ui/SegmentedControl"
 import ShowcaseCard from "../components/ui/ShowcaseCard"
+import PracticePages from "../components/ui/PracticePages"
 
 function SectionTitle({
   eyebrow,
@@ -205,6 +206,17 @@ export default function Components() {
             </div>
           </ComponentBlock>
         </div>
+
+        {/* 실습 페이지 */}
+        <div id="practice">
+          <ComponentBlock
+            title="Practice Pages"
+            description="React 환경 퍼블리셔 필수 스킬을 직접 구현해본 실습 페이지 모음입니다."
+          >
+            <PracticePages />
+          </ComponentBlock>
+        </div>
+
       </div>
     </main>
   )

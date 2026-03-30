@@ -10,11 +10,7 @@ const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/components", label: "Components" },
-  { to: "/notice", label: "Notice" },
-  { to: "/faq", label: "FAQ" },
-  { to: "/tab", label: "Tab" },
-  { to: "/members", label: "Members" },
-  { to: "/contact", label: "Contact" },
+ 
 ]
 
 export default function Header({ darkMode, setDarkMode }: HeaderProps) {

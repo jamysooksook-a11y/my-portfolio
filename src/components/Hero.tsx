@@ -25,16 +25,23 @@ export default function Hero() {
           href="#projects"
           className="rounded-2xl bg-[#A85E2E] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:brightness-95"
         >
-          프로젝트 보기
+          최근 프로젝트 보기
         </a>
-
         <a
-          href="#components"
+          href="#career"
+          className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-slate-700 ring-1 ring-slate-200 transition hover:bg-slate-50
+          dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-800"
+        >
+          수행 프로젝트 보기
+        </a>
+        <a
+          href="/components"
           className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-slate-700 ring-1 ring-slate-200 transition hover:bg-slate-50
           dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-800"
         >
           컴포넌트 보기
         </a>
+      
       </div>
 
     </section>

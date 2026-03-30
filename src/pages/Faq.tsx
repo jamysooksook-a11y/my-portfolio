@@ -46,6 +46,8 @@ export default function Faq() {
         <div className="flex items-center gap-1.5 text-xs text-slate-400">
           <Link to="/" className="hover:text-blue-500 transition">포트폴리오</Link>
           <span>/</span>
+          <Link to="/components" className="hover:text-blue-500 transition">Components</Link>
+          <span>/</span>
           <span>FAQ</span>
         </div>
 

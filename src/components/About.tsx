@@ -6,7 +6,7 @@ export default function About() {
         About
       </h2>
 
-      <div className="mt-8 max-w-3xl space-y-6 text-slate-600 dark:text-slate-300 leading-7">
+      <div className="mt-8 max-w-2xl space-y-6 text-slate-600 dark:text-slate-300 leading-7">
 
         <p>
           퍼블리셔로서 다양한 서비스의 화면을 구현하며
@@ -15,7 +15,7 @@ export default function About() {
 
         <p>
           실무에서는 HTML, SCSS, JavaScript 기반의 퍼블리싱을 수행했고
-          Vue 프로젝트 경험을 통해 컴포넌트 기반 UI 구조를 이해하게 되었습니다.
+          Vue와 React 프로젝트 경험을 통해 컴포넌트 기반 UI 구조를 이해하게 되었습니다.
         </p>
 
         <p>
