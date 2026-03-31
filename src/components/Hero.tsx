@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 export default function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-28">
@@ -34,13 +35,12 @@ export default function Hero() {
         >
           수행 프로젝트 보기
         </a>
-        <a
-          href="/components"
+       <Link to="/components"
           className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-slate-700 ring-1 ring-slate-200 transition hover:bg-slate-50
           dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-800"
         >
           컴포넌트 보기
-        </a>
+        </Link>
       
       </div>
 
